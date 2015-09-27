@@ -51,12 +51,16 @@ meanANDsdSet <- meanANDsdSet[,2:69]
 
 ## 5.From the data set in step 4, creates a second, independent tidy data set
 ##   with the average of each variable for each activity and each subject.
+s <- split(meanANDsdSet,meanANDsdSet[,67:68])
 # the columns of tidyDataSet : subject.activity
 # the rows of tidyDataSet : each variable
 # each cell of tidyDataSet : the average of one variable for one activity and
 #                            one subject
-s <- split(meanANDsdSet,meanANDsdSet[,67:68])
 tidyDataSet <- sapply(s, function(x) colMeans(x[,1:66]))
+# row-column exchange, for meets the tidy data principles(Each variable you
+# measure should be in one column, Each different observation of that variable
+# should be in a different row)
+tidyDataSet <- t(tidyDataSet)
 
 
 ## export data set as a txt file created with write.table() using row.name=FALSE
