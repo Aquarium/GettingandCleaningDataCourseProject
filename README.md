@@ -1,11 +1,11 @@
 # GettingandCleaningDataCourseProject
-Course Project of Getting and Cleaning Data
+Course Project for Getting and Cleaning Data on Coursera
 
 The Course Project webpage is
 https://class.coursera.org/getdata-032/human_grading/index
 
 ##run_analysis.R
-is the R script that does the folling.
+is the R script that does the following.
 
 1.Merges the training and the test sets to create one data set.
 
